@@ -1,4 +1,10 @@
 terraform {
+  cloud {
+    organization = "SynxUK75"
+    workspaces {
+      name = "tfcloud_SynxDevBox"
+    }
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -15,3 +21,5 @@ provider "azurerm" {
     }
   }
 }
+
+
