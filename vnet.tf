@@ -13,7 +13,7 @@ resource "azurerm_subnet" "subnet" {
 }
 
 resource "azurerm_subnet_network_security_group_association" "nsgsubnetassoc" {
-  depends_on = [azurerm_network_security_rule.nsg_rule_inbound]  
+  depends_on = [azurerm_network_security_rule.subnet_nsg_rule_inbound]  
   subnet_id                 = azurerm_subnet.subnet.id
   network_security_group_id = azurerm_network_security_group.subnetnsg.id
   }
