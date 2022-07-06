@@ -1,4 +1,6 @@
 locals {
+  AppNameHash            = substr(lower(md5("${var.AppName}")), 0, 6)
+
   outbound_ports_map = {
     #"300" : "445"
   } 
